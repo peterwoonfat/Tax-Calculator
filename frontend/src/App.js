@@ -1,7 +1,14 @@
 import logo from './logo.svg';
+import React, { useEffect } from 'react';
 import './App.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
+
 
 function App() {
+  useEffect(() => {
+    document.title = 'Tax Liability Calculator';
+  }, []);
+
   return (
     <div className="App">
       {/* set document metadata */}
@@ -10,9 +17,9 @@ function App() {
       <meta name="description" content="Web app used to calculate tax liabilities"/>
       <meta charset="utf-8"/>
       <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
       {/* example content */}
       <header className="App-header">
-        <h1>Tax Liability Calculator</h1>
         <img src={logo} className="App-logo" alt="logo" />
         <p>
           Edit <code>src/App.js</code> and save to reload.
