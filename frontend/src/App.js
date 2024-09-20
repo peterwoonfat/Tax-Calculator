@@ -2,23 +2,17 @@ import logo from './logo.svg';
 import './App.css';
 
 function App() {
-  const meta = {
-    title: 'Some Meta Title',
-    description: 'I am a description, and I can create multiple tags',
-    canonical: 'http://example.com/path/to/page',
-    meta: {
-        charset: 'utf-8',
-        name: {
-            keywords: 'react,meta,document,html,tags'
-        }
-    }
-  }
   return (
     <div className="App">
+      {/* set document metadata */}
       <meta name="keywords" content="HTML, CSS, JavaScript, React, Node.js"/>
       <meta name="author" content="Peter Woon-Fat"/>
       <meta name="description" content="Web app used to calculate tax liabilities"/>
+      <meta charset="utf-8"/>
+      <meta name="viewport" content="width=device-width, initial-scale=1"/>
+      {/* example content */}
       <header className="App-header">
+        <h1>Tax Liability Calculator</h1>
         <img src={logo} className="App-logo" alt="logo" />
         <p>
           Edit <code>src/App.js</code> and save to reload.
