@@ -9,26 +9,12 @@ import Col from 'react-bootstrap/Col';
 
 // single-page web app to calculate tax liabilities
 function App() {
-  // useEffect(() => {
-  //   document.title = 'Tax Liability Calculator';
-  // }, []);
 
   return (
     <div className="App">
       {/* example content */}
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <h1>Peter's Tax Liability Calculator</h1>
       </header>
       {/* input forms for tax calculation parameters */}
       <div>
