@@ -1,4 +1,3 @@
-import logo from './logo.svg';
 import React from 'react';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -13,7 +12,6 @@ function App() {
 
   return (
     <div className="App">
-      {/* example content */}
       <header className="App-header">
         <h1>Peter's Tax Liability Calculator</h1>
       </header>
@@ -21,25 +19,16 @@ function App() {
       <div className='App-forms'>
         <Container>
           <Form>
-            <Row>
-              <Col>
-                <Form.Label>form 1</Form.Label>
+            <Form.Group as={Row} className='mb-3' controlId='formEmploymentIncome'>
+              <Form.Label column sm={2}>
+                Employment Income
+              </Form.Label>
+              <Col sm={2}>
+                <Form.Control type='number'/>
               </Col>
-              <Col>
-                <Form.Control/>
-              </Col>
-            </Row>
-            <Row>
-              <Col>
-                <Form.Label>form 2</Form.Label>
-              </Col>
-              <Col>
-                <Form.Control/>
-              </Col>
-            </Row>
+            </Form.Group>
           </Form>
         </Container>
-
       </div>
 
 
