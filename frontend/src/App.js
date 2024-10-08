@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css';
-import 'bootstrap/dist/css/bootstrap.min.css';
+import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 // import react-bootstrap components
 import Form from 'react-bootstrap/Form';
 import Row from 'react-bootstrap/Row';
