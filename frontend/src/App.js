@@ -7,6 +7,7 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Container from 'react-bootstrap/Container'
 import InputGroup from 'react-bootstrap/InputGroup'
+import Breadcrumb from 'react-bootstrap/Breadcrumb';
 
 
 // single-page web app to calculate tax liabilities
@@ -17,9 +18,18 @@ function App() {
       <header className="App-header">
         <h1>Peter's Tax Liability Calculator</h1>
       </header>
+
+      {/* breadcrumbs to indicate where the user is */}
+      <Breadcrumb>
+        <Breadcrumb.Item active>Tax Liability Calculator</Breadcrumb.Item>
+        <Breadcrumb.Item href='.Tax-brackets'>Tax Brackets</Breadcrumb.Item>
+      </Breadcrumb>
+
+
       {/* input forms for tax calculation parameters */}
       <div className='App-forms'>
         <Container>
+          <h2>Income Sources</h2>
           <Form>
             <Form.Group as={Row} className='mb-3' controlId='formEmploymentIncome'>
               <Form.Label column sm={2} className='form-label'>
@@ -82,6 +92,9 @@ function App() {
 
 
       {/* can use a range form for tax brackets */}
+      <div className='Tax-brackets'>
+
+      </div>
     </div>
 
   );
