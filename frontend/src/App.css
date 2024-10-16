@@ -25,6 +25,12 @@
   color: #495057; /* Match text color to Form.Control */
 }
 
+.App-forms h3 {
+  text-align: left;
+  padding-top: 1rem;
+  padding-bottom: 1.5rem;
+}
+
 .form-control {
   border-left: 0 !important; /* Remove left border for seamless transition */
 }

@@ -28,8 +28,8 @@ function App() {
 
       {/* input forms for tax calculation parameters */}
       <div className='App-forms'>
+        <h3>Income Sources</h3>
         <Container>
-          <h2>Income Sources</h2>
           <Form>
             <Form.Group as={Row} className='mb-3' controlId='formEmploymentIncome'>
               <Form.Label column sm={2} className='form-label'>
@@ -78,6 +78,55 @@ function App() {
             <Form.Group as={Row} className='mb-3' controlId='formOtherIncome'>
               <Form.Label column sm={2} className='form-label'>
                 Other Income
+              </Form.Label>
+              <Col sm={2}>
+                <InputGroup className='mb-2'>
+                  <InputGroup.Text className='no-bg'>$</InputGroup.Text>
+                  <Form.Control type='number' min='0'/>
+                </InputGroup>
+              </Col>
+            </Form.Group>
+          </Form>
+        </Container>
+        <h3>Deductions/Expenses</h3>
+        <Container>
+          <Form>
+            <Form.Group as={Row} className='mb-3' controlId='formRRSPContributions'>
+              <Form.Label column sm={2} className='form-label'>
+                RRSP Contributions
+              </Form.Label>
+              <Col sm={2}>
+                <InputGroup className='mb-2'>
+                  <InputGroup.Text className='no-bg'>$</InputGroup.Text>
+                  <Form.Control type='number' min='0'/>
+                </InputGroup>
+              </Col>
+            </Form.Group>
+            <Form.Group as={Row} className='mb-3' controlId='formProfessionalFees'>
+              <Form.Label column sm={2} className='form-label'>
+                Union Dues or Professional Fees
+              </Form.Label>
+              <Col sm={2}>
+                <InputGroup className='mb-2'>
+                  <InputGroup.Text className='no-bg'>$</InputGroup.Text>
+                  <Form.Control type='number' min='0'/>
+                </InputGroup>
+              </Col>
+            </Form.Group>
+            <Form.Group as={Row} className='mb-3' controlId='formChildcareExpenses'>
+              <Form.Label column sm={2} className='form-label'>
+                Childcare Expenses
+              </Form.Label>
+              <Col sm={2}>
+                <InputGroup className='mb-2'>
+                  <InputGroup.Text className='no-bg'>$</InputGroup.Text>
+                  <Form.Control type='number' min='0'/>
+                </InputGroup>
+              </Col>
+            </Form.Group>
+            <Form.Group as={Row} className='mb-3' controlId='formMovingExpenses'>
+              <Form.Label column sm={2} className='form-label'>
+                Moving Expenses
               </Form.Label>
               <Col sm={2}>
                 <InputGroup className='mb-2'>
