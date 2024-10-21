@@ -88,6 +88,7 @@ function App() {
             </Form.Group>
           </Form>
         </Container>
+        
         <h3>Deductions/Expenses</h3>
         <Container>
           <Form>
