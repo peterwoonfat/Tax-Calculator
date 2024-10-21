@@ -1,10 +1,13 @@
-import logo from './logo.svg';
 import React from 'react';
 import './App.css';
-import 'bootstrap/dist/css/bootstrap.min.css';
+import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
+// import react-bootstrap components
 import Form from 'react-bootstrap/Form';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
+import Container from 'react-bootstrap/Container'
+import InputGroup from 'react-bootstrap/InputGroup'
+import Breadcrumb from 'react-bootstrap/Breadcrumb';
 
 
 // single-page web app to calculate tax liabilities
@@ -12,46 +15,136 @@ function App() {
 
   return (
     <div className="App">
-      {/* example content */}
       <header className="App-header">
         <h1>Peter's Tax Liability Calculator</h1>
       </header>
+
+      {/* breadcrumbs to indicate where the user is */}
+      <Breadcrumb>
+        <Breadcrumb.Item active>Tax Liability Calculator</Breadcrumb.Item>
+        <Breadcrumb.Item href='.Tax-brackets'>Tax Brackets</Breadcrumb.Item>
+      </Breadcrumb>
+
+
       {/* input forms for tax calculation parameters */}
-      <div>
-        {/* <Form>
-          <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
-            <Form.Label>Email address</Form.Label>
-            <Form.Control type="email" placeholder="name@example.com" />
-          </Form.Group>
-          <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
-            <Form.Label>Example textarea</Form.Label>
-            <Form.Control as="textarea" rows={3} />
-          </Form.Group>
-        </Form> */}
-
-        <Form>
-          <Row>
-            <Col>
-              <Form.Label>form 1</Form.Label>
-            </Col>
-            <Col>
-              <Form.Control/>
-            </Col>
-          </Row>
-          <Row>
-            <Col>
-              <Form.Label>form 2</Form.Label>
-            </Col>
-            <Col>
-              <Form.Control/>
-            </Col>
-          </Row>
-        </Form>
-
+      <div className='App-forms'>
+        <h3>Income Sources</h3>
+        <Container>
+          <Form>
+            <Form.Group as={Row} className='mb-3' controlId='formEmploymentIncome'>
+              <Form.Label column sm={2} className='form-label'>
+                Employment Income
+              </Form.Label>
+              <Col sm={2}>
+                <InputGroup className='mb-2'>
+                  <InputGroup.Text className='no-bg'>$</InputGroup.Text>
+                  <Form.Control type='number' min='0'/>
+                </InputGroup>
+              </Col>
+            </Form.Group>
+            <Form.Group as={Row} className='mb-3' controlId='formSelfEmploymentIncome'>
+              <Form.Label column sm={2} className='form-label'>
+                Self Employment Income
+              </Form.Label>
+              <Col sm={2}>
+                <InputGroup className='mb-2'>
+                  <InputGroup.Text className='no-bg'>$</InputGroup.Text>
+                  <Form.Control type='number' min='0'/>
+                </InputGroup>
+              </Col>
+            </Form.Group>
+            <Form.Group as={Row} className='mb-3' controlId='formInvestmentIncome'>
+              <Form.Label column sm={2} className='form-label'>
+                Investment Income
+              </Form.Label>
+              <Col sm={2}>
+                <InputGroup className='mb-2'>
+                  <InputGroup.Text className='no-bg'>$</InputGroup.Text>
+                  <Form.Control type='number' min='0'/>
+                </InputGroup>
+              </Col>
+            </Form.Group>
+            <Form.Group as={Row} className='mb-3' controlId='formCapitalGainLoss'>
+              <Form.Label column sm={2} className='form-label'>
+                Capital Gains/Losses
+              </Form.Label>
+              <Col sm={2}>
+                <InputGroup className='mb-2'>
+                  <InputGroup.Text className='no-bg'>$</InputGroup.Text>
+                  <Form.Control type='number' min='0'/>
+                </InputGroup>
+              </Col>
+            </Form.Group>
+            <Form.Group as={Row} className='mb-3' controlId='formOtherIncome'>
+              <Form.Label column sm={2} className='form-label'>
+                Other Income
+              </Form.Label>
+              <Col sm={2}>
+                <InputGroup className='mb-2'>
+                  <InputGroup.Text className='no-bg'>$</InputGroup.Text>
+                  <Form.Control type='number' min='0'/>
+                </InputGroup>
+              </Col>
+            </Form.Group>
+          </Form>
+        </Container>
+        
+        <h3>Deductions/Expenses</h3>
+        <Container>
+          <Form>
+            <Form.Group as={Row} className='mb-3' controlId='formRRSPContributions'>
+              <Form.Label column sm={2} className='form-label'>
+                RRSP Contributions
+              </Form.Label>
+              <Col sm={2}>
+                <InputGroup className='mb-2'>
+                  <InputGroup.Text className='no-bg'>$</InputGroup.Text>
+                  <Form.Control type='number' min='0'/>
+                </InputGroup>
+              </Col>
+            </Form.Group>
+            <Form.Group as={Row} className='mb-3' controlId='formProfessionalFees'>
+              <Form.Label column sm={2} className='form-label'>
+                Union Dues or Professional Fees
+              </Form.Label>
+              <Col sm={2}>
+                <InputGroup className='mb-2'>
+                  <InputGroup.Text className='no-bg'>$</InputGroup.Text>
+                  <Form.Control type='number' min='0'/>
+                </InputGroup>
+              </Col>
+            </Form.Group>
+            <Form.Group as={Row} className='mb-3' controlId='formChildcareExpenses'>
+              <Form.Label column sm={2} className='form-label'>
+                Childcare Expenses
+              </Form.Label>
+              <Col sm={2}>
+                <InputGroup className='mb-2'>
+                  <InputGroup.Text className='no-bg'>$</InputGroup.Text>
+                  <Form.Control type='number' min='0'/>
+                </InputGroup>
+              </Col>
+            </Form.Group>
+            <Form.Group as={Row} className='mb-3' controlId='formMovingExpenses'>
+              <Form.Label column sm={2} className='form-label'>
+                Moving Expenses
+              </Form.Label>
+              <Col sm={2}>
+                <InputGroup className='mb-2'>
+                  <InputGroup.Text className='no-bg'>$</InputGroup.Text>
+                  <Form.Control type='number' min='0'/>
+                </InputGroup>
+              </Col>
+            </Form.Group>
+          </Form>
+        </Container>
       </div>
 
 
       {/* can use a range form for tax brackets */}
+      <div className='Tax-brackets'>
+
+      </div>
     </div>
 
   );
